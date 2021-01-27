@@ -1,5 +1,4 @@
-class BananaOrPineapple
-  attr_reader :total
+class BananaOrPineapple  
   def initialize
     @total = 0
   end
