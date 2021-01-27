@@ -91,7 +91,7 @@ RSpec.describe Checkout do
       end
     end
 
-    context 'when buy 3 get 1 free offer applies to mangoes' do
+    context 'when buying 3 get 1 for free offer applies to mangoes' do
       before do
         4.times { checkout.scan(:mango) }
       end
@@ -101,7 +101,7 @@ RSpec.describe Checkout do
       end
     end
 
-    context 'when buy 6 get 2 free offer applies to mangoes' do
+    context 'when buying 6 get 2 for free offer applies to mangoes' do
       before do
         8.times { checkout.scan(:mango) }
       end
@@ -111,7 +111,7 @@ RSpec.describe Checkout do
       end
     end
 
-    context 'when buy 9 get 3 free offer applies to mangoes' do
+    context 'when buying 9 get 3 for free offer applies to mangoes' do
       before do
         9.times { checkout.scan(:mango) }
       end
@@ -121,7 +121,7 @@ RSpec.describe Checkout do
       end
     end
 
-    context 'when buy 9 get 3 free offer applies to mangoes' do
+    context 'when buying 9 get 3 for free offer applies to mangoes' do
       before do
         11.times { checkout.scan(:mango) }
       end
