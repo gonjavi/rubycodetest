@@ -91,7 +91,7 @@ RSpec.describe Checkout do
       end
     end
 
-    context 'when a buy 3 get 1 free offer applies to mangos' do
+    context 'when buy 3 get 1 free offer applies to mangoes' do
       before do
         4.times { checkout.scan(:mango) }
       end
@@ -99,6 +99,39 @@ RSpec.describe Checkout do
       it 'returns the discounted price for the basket' do
        # pending 'You need to write the code to satisfy this test'
         expect(total).to eq(600)
+      end
+    end
+
+    context 'when buy 6 get 2 free offer applies to mangoes' do
+      before do
+        8.times { checkout.scan(:mango) }
+      end
+
+      it 'returns the discounted price for the basket' do
+       # pending 'You need to write the code to satisfy this test'
+        expect(total).to eq(1200)
+      end
+    end
+
+    context 'when buy 9 get 3 free offer applies to mangoes' do
+      before do
+        9.times { checkout.scan(:mango) }
+      end
+
+      it 'returns the discounted price for the basket' do
+       # pending 'You need to write the code to satisfy this test'
+        expect(total).to eq(1200)
+      end
+    end
+
+    context 'when buy 9 get 3 free offer applies to mangoes' do
+      before do
+        11.times { checkout.scan(:mango) }
+      end
+
+      it 'returns the discounted price for the basket' do
+       # pending 'You need to write the code to satisfy this test'
+        expect(total).to eq(1600)
       end
     end
   end
