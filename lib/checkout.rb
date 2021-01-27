@@ -1,3 +1,8 @@
+require_relative 'classes.rb'
+appleorpear = AppleOrPear.new
+bananaorpineapple = BananaOrPineapple.new
+mangoes = Mangoes.new
+
 class Checkout
   attr_reader :prices
   private :prices
