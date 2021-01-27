@@ -1,11 +1,15 @@
-class AppleOrPear
-  def discount(item, count)
-    let total = 0
+class AppleOrPear  
+  attr_reader :total
+  def initialize
+    @total = 0
+  end
+
+  def discount(item, count, prices)
     if (count % 2 == 0)
-      total += prices.fetch(item) * (count / 2)
+      @total += prices.fetch(item) * (count / 2)
     else
-      total += prices.fetch(item) * count
+      @total += prices.fetch(item) * count
     end
-    total
+    @total
   end
 end

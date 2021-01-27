@@ -1,14 +1,17 @@
 require_relative 'classes.rb'
-appleorpear = AppleOrPear.new
-bananaorpineapple = BananaOrPineapple.new
-mangoes = Mangoes.new
 
 class Checkout
   attr_reader :prices
+  attr_reader :AppleOrPear
+  attr_reader :BananaOrPineapple
+  attr_reader :Mangoes
   private :prices
-
+  
   def initialize(prices)
     @prices = prices
+    @appleorpear = AppleOrPear.new
+    @bananaorpineapple = BananaOrPineapple.new
+    @mangoes = Mangoes.new
   end
 
   def scan(item)
@@ -19,22 +22,11 @@ class Checkout
     total = 0
     basket.inject(Hash.new(0)) { |items, item| items[item] += 1; items }.each do |item, count|
       if item == :apple || item == :pear
-        if (count % 2 == 0)
-          total += prices.fetch(item) * (count / 2)
-        else
-          total += prices.fetch(item) * count
-        end
+       total += @appleorpear.discount(item, count, @prices)
       elsif item == :banana || item == :pineapple
-        if item == :pineapple
-          total += (prices.fetch(item) / 2)
-          total += (prices.fetch(item)) * (count - 1)
-        else
-          total += (prices.fetch(item) / 2) * count
-        end
+        total += @bananaorpineapple.discount(item, count, @prices)
       elsif item == :mango
-        c = count / 3
-        count1 = count -c
-        total += prices.fetch(item) * count1          
+        total += @mangoes.discount(item, count, @prices) 
       else
         total += prices.fetch(item) * count
       end
