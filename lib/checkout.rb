@@ -1,10 +1,7 @@
 require_relative 'classes.rb'
 
 class Checkout
-  attr_reader :prices
-  attr_reader :AppleOrPear
-  attr_reader :BananaOrPineapple
-  attr_reader :Mangoes
+  attr_reader :prices  
   private :prices
   
   def initialize(prices)

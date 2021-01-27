@@ -97,7 +97,6 @@ RSpec.describe Checkout do
       end
 
       it 'returns the discounted price for the basket' do
-       # pending 'You need to write the code to satisfy this test'
         expect(total).to eq(600)
       end
     end
@@ -108,7 +107,6 @@ RSpec.describe Checkout do
       end
 
       it 'returns the discounted price for the basket' do
-       # pending 'You need to write the code to satisfy this test'
         expect(total).to eq(1200)
       end
     end
@@ -119,7 +117,6 @@ RSpec.describe Checkout do
       end
 
       it 'returns the discounted price for the basket' do
-       # pending 'You need to write the code to satisfy this test'
         expect(total).to eq(1200)
       end
     end
@@ -130,7 +127,6 @@ RSpec.describe Checkout do
       end
 
       it 'returns the discounted price for the basket' do
-       # pending 'You need to write the code to satisfy this test'
         expect(total).to eq(1600)
       end
     end
