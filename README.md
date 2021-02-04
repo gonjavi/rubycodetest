@@ -32,3 +32,5 @@ The code we have provided uses `rspec` for testing, run it with `bundle exec rsp
 - Deep understanding of OOP principles
 - Good testing practices
 - Bonus: A detailed git commit log to show the refactoring process you went through
+
+
